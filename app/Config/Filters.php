@@ -50,6 +50,11 @@ class Filters extends BaseConfig
 					'tahunajaran', 'tahunajaran/*',
 					'groupsoal', 'groupsoal/*',
 					'detail', 'detail/*',
+					'gurusoal', 'gurusoal/*',
+					'nilai', 'nilai/*',
+					'nilaiujian', 'nilaiujian/*',
+					'setujian', 'setujian/*',
+					'detailsoal', 'detailsoal/*',
 				]
 			],
 			'toolbar',

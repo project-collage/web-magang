@@ -74,7 +74,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                    <h3>8</h3>
+                    <h3><?= $tot_ujian; ?><sup style="font-size: 20px"></sup></h3>
 
                     <p>Ujian Aktif</p>
                 </div>

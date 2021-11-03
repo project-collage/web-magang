@@ -25,4 +25,9 @@ class HomeModel extends Model
     {
         return $this->db->table('user')->where('status', 'pppk')->countAllResults();
     }
+
+    public function jml_ujian()
+    {
+        return $this->db->table('setujian')->where('status', 'aktif')->countAllResults();
+    }
 }

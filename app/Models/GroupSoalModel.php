@@ -28,6 +28,7 @@ class GroupSoalModel extends Model
             ->orderBy('idujian', 'ASC')
             ->get()->getResultArray();
     }
+
     public function tampil_detail($data)
     {
         return $this->db->table("soal")->where('idgroup', $data['detail'])
@@ -38,7 +39,7 @@ class GroupSoalModel extends Model
         // return $data;
     }
 
-    public function edit_group_soal($data)
+    public function verifikasi_group_soal($data)
     {
         $this->db->table('groupsoal')->where('idgroup', $data['idgroup'])->update($data);
     }

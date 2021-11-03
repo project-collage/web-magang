@@ -26,7 +26,12 @@
                         <td><?= $value['tahun']; ?></td>
                         <td><?= $value['namagroup']; ?></td>
                         <td><?= $value['mapel']; ?></td>
-                        <td></td>
+                        <td><?php
+                            $mysqli = new mysqli('localhost', 'root', '', 'pkl');
+                            $j = mysqli_query($mysqli, "select * from soal where idgroup = '$value[idgroup]'");
+                            $jumlah = mysqli_num_rows($j);
+                            echo $jumlah;
+                            ?> Soal </td>
 
                         <td style="font-size :11px"><?php if ($value['statusgrup'] == 'Y') {
                                                         echo "<p style='background-color:green; color:white; border-radius: 5px'>" . "Verified" . "</p>";
@@ -35,9 +40,9 @@
                                                     } ?></td>
                         <td>
                             <button class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modal-edit<?= $value['idgurumapel'] ?>"><i class="fas fa-download"></i></button>
-                            <a href="<?= base_url('groupsoal/detail/' . $value['idgroup']) ?>"><i class="fas fa-eye btn btn-sm btn-success"></i></a>
+                            <a href="<?= base_url('detailsoal/detail_soal/' . $value['idgroup']) ?>"><i class="fas fa-eye btn btn-sm btn-success"></i></a>
                             <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-edit<?= $value['idgroup'] ?>"><i class="fas fa-edit"></i></button>
-                            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-hapus<?= $value['idgurumapel'] ?>"><i class="fas fa-trash-alt"></i></button>
+                            <button class="btn btn-sm btn-danger" data-toggle="modal" disabled><i class="fas fa-trash-alt"></i></button>
                         </td>
                     </tr>
                 <?php } ?>
@@ -60,7 +65,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?php echo form_open('groupsoal/edit_group_soal/' . $value['idgroup']) ?>
+                    <?php echo form_open('groupsoal/verifikasi_group_soal/' . $value['idgroup']) ?>
                     <div class="form-group">
                         <label>Verifikasi Soal</label>
                         <select class="form-control" name="status" required>

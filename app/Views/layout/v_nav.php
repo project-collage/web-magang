@@ -1,12 +1,12 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-primary elevation-4" style="background-color: #394263;">
+<aside class="main-sidebar sidebar-primary elevation-4 " style="background-color: #394263;">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <span class="brand-text font-weight-light" style="color:white;">BIMBEL 21</span>
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar ">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
@@ -23,15 +23,16 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+
+                <li class="nav-item">
+                    <a href="<?= base_url('home') ?>" class="nav-link">
+                        <i class="fas fa-stopwatch" style="padding-right: 5px; color: #9197aa"></i>
+                        <p style="color: white;">
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
                 <?php if (session()->get('status') == 'admin') { ?>
-                    <li class="nav-item">
-                        <a href="<?= base_url('home') ?>" class="nav-link">
-                            <i class="fas fa-stopwatch" style="padding-right: 5px; color: #9197aa"></i>
-                            <p style="color: white;">
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="fas fa-tools" style="padding-right: 5px; color: #9197aa"></i>
@@ -72,15 +73,7 @@
                 <?php } ?>
                 <?php if (session()->get('status') == 'guru') { ?>
                     <li class="nav-item">
-                        <a href="<?= base_url('home') ?>" class="nav-link">
-                            <i class="fas fa-stopwatch" style="padding-right: 5px; color: #9197aa"></i>
-                            <p style="color: white;">
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('home') ?>" class="nav-link">
+                        <a href="<?= base_url('gurusoal') ?>" class="nav-link">
                             <i class="fas fa-sticky-note" style="padding-right: 5px; color: #9197aa"></i>
                             <p style="color: white;">
                                 Soal
@@ -88,7 +81,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                        <a href="<?= base_url('setujian') ?>" class="nav-link">
                             <i class="fas fa-cog" style="padding-right: 5px; color: #9197aa"></i>
                             <p style="color: white;">
                                 Set Ujian
@@ -97,8 +90,19 @@
                     </li>
                 <?php } ?>
 
+                <?php if (session()->get('status') == 'cpns' && 'pppk') { ?>
+                    <li class="nav-item">
+                        <a href="<?= base_url('daftarujian') ?>" class="nav-link">
+                            <i class="fas fa-sticky-note" style="padding-right: 5px; color: #9197aa"></i>
+                            <p style="color: white;">
+                                Daftar Ujian
+                            </p>
+                        </a>
+                    </li>
+                <?php } ?>
+
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="<?= base_url('nilai') ?>" class="nav-link">
                         <i class="fas fa-trophy" style="padding-right: 5px; color: #9197aa"></i>
                         <p style="color: white;">
                             Nilai

@@ -26,26 +26,26 @@ class GroupSoal extends BaseController
         return view('layout/v_wrapper', $data);
     }
 
-    public function edit_group_soal($id_soal)
+    public function verifikasi_group_soal($id_soal)
     {
         $data = array(
             'idgroup' => $id_soal,
             'statusgrup' => $this->request->getPost('status')
         );
-        $this->ModelGroupSoal->edit_group_soal($data);
+        $this->ModelGroupSoal->verifikasi_group_soal($data);
         session()->setFlashData('pesan', 'Data berhasil diupdate');
         return redirect()->to(base_url('groupsoal'));
     }
 
-    public function detail($idgroup)
-    {
-        $data = array(
-            'detail' => $idgroup,
-            'title' => 'Detail Soal',
-            'isi' => 'detail/v_detail'
+    // public function detail($idgroup)
+    // {
+    //     $data = array(
+    //         'detail' => $idgroup,
+    //         'title' => 'Detail Soal',
+    //         'isi' => 'detail/v_detail'
 
-        );
-        $this->ModelGroupSoal->tampil_detail($data);
-        return view('layout/v_wrapper', $data);
-    }
+    //     );
+    //     $this->ModelGroupSoal->tampil_detail($data);
+    //     return view('layout/v_wrapper', $data);
+    // }
 }

@@ -19,6 +19,7 @@ class Home extends BaseController
 			'tot_guru' => $this->HomeModel->jml_guru(),
 			'tot_cpns' => $this->HomeModel->jml_cpns(),
 			'tot_pppk' => $this->HomeModel->jml_pppk(),
+			'tot_ujian' => $this->HomeModel->jml_ujian(),
 			'isi' => 'v_home',
 		);
 
