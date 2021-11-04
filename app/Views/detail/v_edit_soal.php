@@ -70,7 +70,7 @@
                     </div>
                     <label>Point E</label>
                     <div>
-                        <input type="text" name="pointd" class="form-control " value=" <?= $values['pointe']; ?>" required></input>
+                        <input type="text" name="pointe" class="form-control " value=" <?= $values['pointe']; ?>" required></input>
                     </div>
                 </div>
                 <div class="form-group">

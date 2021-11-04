@@ -20,9 +20,11 @@ $mapel = $_POST['mapel']; ?>
                         <th class="text-center">No</th>
                         <th class="text-center">Nama</th>
                         <th class="text-center">Tgl Ujian</th>
-                        <th class="text-center">Mapel</th>
+                        <th class="text-center">Jenis Soal</th>
+                        <th class="text-center">TWK</th>
+                        <th class="text-center">TIU</th>
+                        <th class="text-center">TKP</th>
                         <th class="text-center">Nilai</th>
-                        <th class="text-center">Status</th>
                         <th class="text-center">Actions</th>
                         <?php
                         $tampil = mysqli_query(
@@ -54,17 +56,16 @@ $mapel = $_POST['mapel']; ?>
                             <td class="text-center"><?php echo $no++; ?></td>
                             <td class="text-center"><?php echo $hasil['namauser']; ?></td>
                             <td class="text-center"><?php echo $hasil['tgl']; ?></td>
-                            <td class="text-center"><?php echo $hasil['mapel']; ?></td>
+                            <td class="text-center"><?php echo $hasil['namagroup']; ?></td>
+                            <td class="text-center"><?php echo $hasil['nilai_twk']; ?></td>
+                            <td class="text-center"><?php echo $hasil['nilai_tiu']; ?></td>
+                            <td class="text-center"><?php echo $hasil['nilai_tkp']; ?></td>
                             <td class="text-center"><?php echo $hasil['nilai']; ?></td>
                             <td class="text-center"><?php
-                                                    if ($hasil['nilai'] >= 85) {
-                                                        echo '<span class="label label-success">Sangat Baik</span>';
-                                                    } elseif ($hasil['nilai'] >= 70) {
-                                                        echo '<span class="label label-success">Baik</span>';
-                                                    } elseif ($hasil['nilai'] >= 60) {
-                                                        echo '<span class="label label-warning">Cukup</span>';
+                                                    if ($hasil['nilai'] >= '300') {
+                                                        echo "<p style='background-color:green; color:white; border-radius: 5px'>" . "Lulus" . "</p>";
                                                     } else {
-                                                        echo '<span class="label label-danger">Mengulang</span>';
+                                                        echo "<p style='background-color:red; color:white; border-radius: 5px'>" . "Tidak Lulus" . "</p>";
                                                     } ?></td>
                             <td class="text-center">
                                 <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-hapus<?= $hasil['idnilai'] ?>"><i class="fas fa-trash-alt"></i></button>

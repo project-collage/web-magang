@@ -55,6 +55,8 @@ class Filters extends BaseConfig
 					'nilaiujian', 'nilaiujian/*',
 					'setujian', 'setujian/*',
 					'detailsoal', 'detailsoal/*',
+					'tes', 'tes/*',
+					'daftarujian', 'daftarujian/*',
 				]
 			],
 			'toolbar',

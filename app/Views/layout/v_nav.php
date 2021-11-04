@@ -71,6 +71,8 @@
                         </a>
                     </li>
                 <?php } ?>
+
+
                 <?php if (session()->get('status') == 'guru') { ?>
                     <li class="nav-item">
                         <a href="<?= base_url('gurusoal') ?>" class="nav-link">
@@ -88,6 +90,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url('nilai/nilai_guru') ?>" class="nav-link">
+                            <i class="fas fa-trophy" style="padding-right: 5px; color: #9197aa"></i>
+                            <p style="color: white;">
+                                Nilai
+                            </p>
+                        </a>
+                    </li>
                 <?php } ?>
 
                 <?php if (session()->get('status') == 'cpns' && 'pppk') { ?>
@@ -99,17 +109,26 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url('nilai/tampil_nilai_siswa') ?>" class="nav-link">
+                            <i class="fas fa-trophy" style="padding-right: 5px; color: #9197aa"></i>
+                            <p style="color: white;">
+                                Nilai
+                            </p>
+                        </a>
+                    </li>
                 <?php } ?>
 
-                <li class="nav-item">
-                    <a href="<?= base_url('nilai') ?>" class="nav-link">
-                        <i class="fas fa-trophy" style="padding-right: 5px; color: #9197aa"></i>
-                        <p style="color: white;">
-                            Nilai
-                        </p>
-                    </a>
-                </li>
+
                 <?php if (session()->get('status') == 'admin') { ?>
+                    <li class="nav-item">
+                        <a href="<?= base_url('nilai') ?>" class="nav-link">
+                            <i class="fas fa-trophy" style="padding-right: 5px; color: #9197aa"></i>
+                            <p style="color: white;">
+                                Nilai
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="<?= base_url('user') ?>" class="nav-link">
                             <i class="fas fa-user" style="padding-right: 5px; color: #9197aa"></i>
