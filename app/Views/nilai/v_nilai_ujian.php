@@ -94,7 +94,7 @@ $mapel = $_POST['mapel']; ?>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a href="<?= base_url('nilai/hapus_nilai/' . $hasil['idujian']) ?>" type="submit" class="btn btn-primary">Delete</a>
+                    <a href="<?= base_url('nilai/hapus_nilai/' . $hasil['idnilai']) ?>" type="submit" class="btn btn-primary">Delete</a>
                 </div>
 
             </div>

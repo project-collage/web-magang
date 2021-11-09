@@ -4,7 +4,6 @@
     <div class="card-header">
         <div class="row" style="padding: 10px;">
             <button type="button" class="btn btn-primary btn-sm" style="margin-right: 10px;" data-toggle="modal" data-target="#modal-default">Tambah Ujian</button>
-
         </div>
     </div>
     <!-- /.card-header -->

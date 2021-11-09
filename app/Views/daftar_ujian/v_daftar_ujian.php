@@ -42,7 +42,7 @@
 
                                 <!-- Modal Body -->
                                 <div class="modal-body">
-                                    <form action="<?= base_url('daftarujian/prosesujian/' . $value['idujian']) ?>" method="post">
+                                    <form action="<?= base_url('daftarujian/prosesujian') ?>" method="post">
                                         <input type="hidden" name="idujian" value="<?php echo $value['idujian']; ?>">
                                         <div class="form-group">
                                             <label>Token Soal</label>
